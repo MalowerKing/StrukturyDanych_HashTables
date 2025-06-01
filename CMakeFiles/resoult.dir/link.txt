@@ -1,0 +1,1 @@
+/nix/store/gj9lra51hwhxnhz05jqk5lh03wipamv0-gcc-wrapper-14-20241116/bin/g++ -Wl,--dependency-file=CMakeFiles/resoult.dir/link.d CMakeFiles/resoult.dir/main.cpp.o -o build/bin/resoult
