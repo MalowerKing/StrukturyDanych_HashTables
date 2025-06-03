@@ -29,7 +29,7 @@ void createPlot_open(int i) {
 
         int* losowe = new int[i];
         for (int y = 0; y < i; y++) {
-               losowe[y] = rand() % (i/10) +1; 
+               losowe[y] = rand() % i +1; 
         }
 
         sprintf(buffer, "Open_Modulo_%d.csv", i);
@@ -154,10 +154,10 @@ void createPlot_open_opt(int i) {
 
         int* losowe = new int[i];
         for (int y = 0; y < i; y++) {
-               losowe[i] = i +1; 
+               losowe[y] = y+1; 
         }
 
-        sprintf(buffer, "Open_Modulo_%d.csv", i);
+        sprintf(buffer, "Open_Modulo_%d_opt.csv", i);
         
         myFile.open(buffer, ios::app);
 
@@ -173,7 +173,7 @@ void createPlot_open_opt(int i) {
 
         myFile.close();
 
-        sprintf(buffer, "Open_Modulo_%d_remove.csv", i);
+        sprintf(buffer, "Open_Modulo_%d_remove_opt.csv", i);
         
         myFile.open(buffer, ios::app);
 
@@ -199,7 +199,7 @@ void createPlot_openMulti_opt(int i) {
 
         int* losowe = new int[i];
         for (int y = 0; y < i; y++) {
-               losowe[i] =  y +1; 
+               losowe[y] =  y+1; 
         }
         
         myFile.open(buffer, ios::app);
@@ -279,7 +279,7 @@ void createPlot_open_pes(int i) {
 
         int* losowe = new int[i];
         for (int y = 0; y < i; y++) {
-               losowe[y] =  y+1; 
+               losowe[y] =  y*i; 
         }
 
         sprintf(buffer, "Open_Modulo_%d_pes.csv", i);
@@ -324,7 +324,7 @@ void createPlot_openMulti_pes(int i) {
 
         int* losowe = new int[i];
         for (int y = 0; y < i; y++) {
-               losowe[y] = 70; 
+               losowe[y] = y*i; 
         }
         
         myFile.open(buffer, ios::app);
@@ -347,7 +347,7 @@ void createPlot_openMulti_pes(int i) {
 
         cout << buffer << endl;
         myFile << "czas,czynnik\n";
-        for(int y = 0; y < y; y++) {
+        for(int y = 0; y < i; y++) {
 
                 if(y % (i/20) == 0) {MEASURE_SOMETHING(tableOpen.deleteItem(losowe[y])); myFile << "," << tableOpen.peekZajetosc() << "\n";}
                 else {tableOpen.deleteItem(losowe[y]);}
@@ -367,7 +367,7 @@ void createPlot_openFold_pes(int i) {
 
         int* losowe = new int[i];
         for (int y = 0; y < i; y++) {
-               losowe[y] = 70; 
+               losowe[y] = y*i; 
         }
 
         cout << buffer << endl;
